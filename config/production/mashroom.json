@@ -1,0 +1,51 @@
+{
+    "name": "Mashroom Portal Quickstart",
+    "port": 5050,
+    "pluginPackageFolders": [
+        {
+            "path": "../../node_modules/@mashroom",
+            "watch": true
+        },
+        {
+            "path": "../../plugin-packages",
+            "watch": true
+        }],
+    "indexPage": "/portal",
+    "plugins": {
+        "Mashroom Portal WebApp": {
+            "adminApp": "Mashroom Portal Admin App",
+            "defaultTheme": "Mashroom Portal Default Theme"
+        },
+        "Mashroom Session Middleware": {
+            "provider": "Mashroom Session Filestore Provider",
+            "session": {
+            }
+        },
+        "Mashroom Session Filestore Provider": {
+            "path": "../../data/sessions",
+            "ttl": 1200
+        },
+        "Mashroom Security Services": {
+            "provider": "Mashroom Security Simple Provider",
+            "acl": "./acl.json",
+            "loginPage": "/login"
+        },
+        "Mashroom Security Simple Provider": {
+            "users": "./users.json"
+        },
+        "Mashroom Storage Services": {
+            "provider": "Mashroom Storage Filestore Provider"
+        },
+        "Mashroom Storage Filestore Provider": {
+            "dataFolder": "../../data/storage"
+        },
+        "Mashroom Internationalization Services": {
+            "availableLanguages": ["en", "de"],
+            "defaultLanguage": "en"
+        },
+        "Mashroom Http Proxy Services": {
+            "rejectUntrustedCerts": false,
+            "poolMaxSockets": 10
+        }
+    }
+}

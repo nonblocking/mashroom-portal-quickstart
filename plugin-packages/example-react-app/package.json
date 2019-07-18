@@ -1,0 +1,66 @@
+{
+    "name": "example-react-app",
+    "description": "Example react app that can be used in the Mashroom Portal",
+    "license": "MIT",
+    "version": "1.0.0",
+    "devDependencies": {
+        "@babel/cli": "7.4.4",
+        "eslint": "^5.16.0",
+        "jest": "^24.8.0",
+        "react": "^16.8.6",
+        "react-dom": "^16.8.6",
+        "webpack": "^4.34.0",
+        "babel-loader": "^8.0.6",
+        "eslint-loader": "^2.1.2",
+        "css-loader": "^3.0.0",
+        "file-loader": "^4.0.0",
+        "sass-loader": "^7.1.0",
+        "node-sass": "^4.12.0",
+        "style-loader": "^0.23.1",
+        "webpack-cli": "^3.3.4",
+        "webpack-dev-server": "^3.7.1"
+    },
+    "scripts": {
+        "lint": "eslint src",
+        "flow": "flow check",
+        "dev": "webpack-dev-server --hot --mode development",
+        "build": "webpack --mode production --display-error-details"
+    },
+    "mashroom": {
+        "devModeBuildScript": "build",
+        "plugins": [
+            {
+                "name": "Example React App",
+                "title": {
+                    "en": "Example React App",
+                    "de": "Beispiel React App"
+                },
+                "category": "Examples",
+                "type": "portal-app",
+                "bootstrap": "startExampleReactApp",
+                "resources": {
+                    "js": [
+                        "bundle.js"
+                    ],
+                    "css": []
+                },
+                "defaultConfig": {
+                    "resourcesRoot": "./dist",
+                    "restProxies": {},
+                    "rolePermissions": {
+                        "edit": [
+                            "RoleMyAppEdit",
+                            "Administrator"
+                        ],
+                        "doEverything": [
+                            "Administrator"
+                        ]
+                    },
+                    "appConfig": {
+                        "name": "World"
+                    }
+                }
+            }
+        ]
+    }
+}

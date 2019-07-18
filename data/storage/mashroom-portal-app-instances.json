@@ -1,0 +1,70 @@
+{
+  "d": [
+    {
+      "pluginName": "Mashroom Welcome Portal App",
+      "instanceId": "F49DXZUlX",
+      "_id": "nM6pEm57Bl"
+    },
+    {
+      "pluginName": "Mashroom Portal Demo React App",
+      "instanceId": "KFk349M54L",
+      "appConfig": {
+        "firstName": "Rachel"
+      },
+      "_id": "R1iEGj5b6m"
+    },
+    {
+      "pluginName": "Mashroom Portal Demo React App",
+      "instanceId": "x0iHMxeKor",
+      "appConfig": {
+        "firstName": "Monica"
+      },
+      "_id": "LBXBF5EiQu"
+    },
+    {
+      "pluginName": "Mashroom Portal Demo React App",
+      "instanceId": "W4yttBFO1o",
+      "appConfig": {
+        "firstName": "Phoebe"
+      },
+      "_id": "R6xYMRZYye"
+    },
+    {
+      "pluginName": "Mashroom Portal Demo React App",
+      "instanceId": "JS1eGAsIEc",
+      "appConfig": {
+        "firstName": "Marvin"
+      },
+      "_id": "Aro9qfQ97P"
+    },
+    {
+      "pluginName": "Mashroom Portal Demo Angular App",
+      "instanceId": "e8lZilq6cT",
+      "appConfig": {
+        "firstName": "Chandler"
+      },
+      "_id": "JAvXIqrvA-"
+    },
+    {
+      "pluginName": "Mashroom Portal Demo Load Dynamically App",
+      "instanceId": "ed8GIZ930S",
+      "_id": "jJCypu25wE"
+    },
+    {
+      "pluginName": "Mashroom Portal Demo Rest Proxy App",
+      "instanceId": "oMAZBU0TYj",
+      "_id": "i4dOA1GiepJ"
+    },
+    {
+      "pluginName": "Mashroom Portal Tabify App",
+      "instanceId": "LmbJC8IuaS",
+      "_id": "csGu9yINglg"
+    },
+    {
+      "pluginName": "Mashroom Portal Admin App",
+      "instanceId": null,
+      "appConfig": {},
+      "_id": "Lg1U3Mbba"
+    }
+  ]
+}

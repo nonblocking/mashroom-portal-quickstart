@@ -1,0 +1,25 @@
+{
+  "d": [
+    {
+      "type": "Portal-App",
+      "key": "Mashroom Portal Admin App_global",
+      "permissions": [
+        {
+          "permissions": [
+            "View"
+          ],
+          "roles": [
+            "Administrator"
+          ]
+        }
+      ],
+      "_id": "oGs9t9lqh-"
+    },
+    {
+      "type": "Page",
+      "key": "home",
+      "permissions": null,
+      "_id": "6Dpi6N0oP"
+    }
+  ]
+}
