@@ -45,7 +45,7 @@
         "flow-bin": "^0.101.0"
     },
     "scripts": {
-        "setup": "npm install && lerna bootstrap",
+        "setup": "npm install && lerna bootstrap --no-ci",
         "setup-production": "npm install --production && NODE_ENV=production lerna bootstrap",
         "flow": "flow check",
         "lint": "lerna run lint",
