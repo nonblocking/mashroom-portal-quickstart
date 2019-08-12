@@ -56,7 +56,7 @@ export default class App extends PureComponent<Props, State> {
                     <strong>Hello {this.props.name}!</strong>
                 </p>
                 <p>
-                    <a id='example-app-publish-some-message-link' href='javascript:void(0)' onClick={() => this.sendMessage()}>Send Message</a>
+                    <a id='example-app-publish-some-message-link' href='javascript:void(0)' onClick={() => this.sendMessage()}>Publish a Message</a>
                 </p>
                 {receivedData && (
                     <p>
