@@ -24,7 +24,20 @@
                     lang: 'en',
                     appConfig: portalAppConfig
                 };
-                window.startExampleReactApp(element, portalAppSetup);
+                var portalClientServices = {
+                    messageBus: {
+                        subscribe: function(topic) {
+                            console.info('Subscribed to topic: ', topic);
+                        },
+                        publish: function(topic, data) {
+                            console.info('Published to topic: ', topic, data);
+                        }
+                    },
+                    stateService: {
+
+                    }
+                };
+                window.startExampleReactApp(element, portalAppSetup, portalClientServices);
             });
         })();
     </script>

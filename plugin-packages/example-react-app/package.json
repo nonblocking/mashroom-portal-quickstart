@@ -4,7 +4,8 @@
     "license": "MIT",
     "version": "1.0.0",
     "devDependencies": {
-        "@babel/cli": "7.4.4",
+        "@babel/cli": "^7.4.4",
+        "@babel/polyfill": "^7.4.4",
         "eslint": "^5.16.0",
         "jest": "^24.8.0",
         "react": "^16.8.6",
@@ -18,13 +19,25 @@
         "node-sass": "^4.12.0",
         "style-loader": "^0.23.1",
         "webpack-cli": "^3.3.4",
-        "webpack-dev-server": "^3.7.1"
+        "webpack-dev-server": "^3.7.1",
+        "selenium-webdriver": "^3.6.0",
+        "chromedriver": "^76.0.0"
     },
     "scripts": {
         "lint": "eslint src",
         "flow": "flow check",
         "dev": "webpack-dev-server --hot --mode development",
-        "build": "webpack --mode production --display-error-details"
+        "build": "webpack --mode production --display-error-details",
+        "test": "jest --testPathPattern=test/ --passWithNoTests",
+        "test-e2e": "jest --testPathPattern=test-e2e/"
+    },
+    "jest": {
+        "verbose": true,
+        "roots": [
+            "<rootDir>/test",
+            "<rootDir>/test-e2e"
+        ],
+        "testRegex": "test\\.js$"
     },
     "mashroom": {
         "devModeBuildScript": "build",
