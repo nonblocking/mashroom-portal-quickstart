@@ -10,6 +10,7 @@ import 'chromedriver';
 import  {Builder, By, until} from 'selenium-webdriver';
 
 const SANDBOX_BASE_URL = 'http://localhost:5050/portal/web/sandbox';
+const APP_NAME = 'Example React App';
 
 describe('Sample React App', () => {
 
@@ -37,7 +38,7 @@ describe('Sample React App', () => {
         const name = 'Maximilian';
 
         const appConfigParamValue = btoa(JSON.stringify({ name }));
-        const url = `${SANDBOX_BASE_URL}?sbAppName=Example%20React%20App&sbAppConfig=${appConfigParamValue}`;
+        const url = `${SANDBOX_BASE_URL}?sbAppName=${APP_NAME}&sbAppConfig=${appConfigParamValue}`;
         await driver.get(url);
 
         await loginAndWaitForApp();
@@ -49,7 +50,7 @@ describe('Sample React App', () => {
     });
 
     it('publishes the correct message', async () => {
-        const url = `${SANDBOX_BASE_URL}?sbAppName=Example%20React%20App`;
+        const url = `${SANDBOX_BASE_URL}?sbAppName=${APP_NAME}`;
         await driver.get(url);
 
         await loginAndWaitForApp();
@@ -68,7 +69,7 @@ describe('Sample React App', () => {
     });
 
     it('processes a subscribed message correctly', async () => {
-        const url = `${SANDBOX_BASE_URL}?sbAppName=Example%20React%20App`;
+        const url = `${SANDBOX_BASE_URL}?sbAppName=${APP_NAME}`;
         await driver.get(url);
 
         await loginAndWaitForApp();
