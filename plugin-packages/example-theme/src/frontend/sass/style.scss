@@ -1040,6 +1040,10 @@ footer {
         }
     }
 
+    #mashroom-portal-auth-expires-warning {
+        left: calc(50% - 240px);
+        width: 480px;
+    }
 }
 
 @media (min-width: 768px) {

@@ -16,10 +16,19 @@
     "plugins": {
         "Mashroom Portal WebApp": {
             "adminApp": "Mashroom Portal Admin App",
-            "defaultTheme": "Mashroom Portal Default Theme"
+            "defaultTheme": "Mashroom Portal Default Theme",
+            "warnBeforeAuthenticationExpiresSec": 120
         },
         "Mashroom Portal Default Theme": {
             "showEnvAndVersions": true
+        },
+        "Mashroom Session Middleware": {
+            "provider": "memory",
+            "session": {
+                "cookie": {
+                    "maxAge": 3600000
+                }
+            }
         },
         "Mashroom Security Services": {
             "provider": "Mashroom Security Simple Provider",
@@ -27,7 +36,8 @@
             "loginPage": "/login"
         },
         "Mashroom Security Simple Provider": {
-            "users": "./users.json"
+            "users": "./users.json",
+            "authenticationTimeoutSec": 1200
         },
         "Mashroom Storage Services": {
             "provider": "Mashroom Storage Filestore Provider"
