@@ -39,6 +39,9 @@
             "users": "./users.json",
             "authenticationTimeoutSec": 1200
         },
+        "Mashroom Helmet Middleware": {
+
+        },
         "Mashroom Storage Services": {
             "provider": "Mashroom Storage Filestore Provider"
         },
@@ -52,6 +55,18 @@
         "Mashroom Http Proxy Services": {
             "rejectUntrustedCerts": false,
             "poolMaxSockets": 10
+        },
+        "Mashroom WebSocket Services": {
+            "restrictToRoles": null,
+            "enableKeepAlive": false,
+            "maxConnections": 20
+        },
+        "Mashroom Messaging Services": {
+            "externalProvider": null,
+            "externalTopics": [],
+            "userPrivateBaseTopic": "user",
+            "enableWebSockets": true,
+            "topicACL": "./topic_acl.json"
         }
     }
 }
