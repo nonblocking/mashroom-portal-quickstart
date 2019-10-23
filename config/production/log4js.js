@@ -12,11 +12,19 @@ if (!cluster.isMaster) {
 
 module.exports = {
     appenders: {
-        file: {'type': 'file', 'filename': `../../log/mashroom${clusterSuffix}.log`, 'maxLogSize': 10485760, 'numBackups': 3},
-        console: {'type': 'console'}
+        file: {
+            type: 'file',
+            filename: `../../log/mashroom${clusterSuffix}.log`,
+            maxLogSize: 10485760,
+            numBackups: 3,
+            layout: {
+                type: 'pattern',
+                pattern: '%d %p %X{sessionID} %X{clientIP} %X{browser} %X{browserVersion} %X{username} %c - %m'
+            }
+        }
     },
     categories: {
-        default: {appenders: ['file', 'console'], 'level': 'info'}
+        default: {appenders: ['file'], 'level': 'info'}
     },
     disableClustering: true
 };
