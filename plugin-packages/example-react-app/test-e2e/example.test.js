@@ -5,7 +5,6 @@
  * and how to simulate and test the MessageBus communication.
  */
 
-import '@babel/polyfill';
 import 'chromedriver';
 import  {Builder, By, until} from 'selenium-webdriver';
 
