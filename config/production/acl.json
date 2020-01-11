@@ -4,7 +4,7 @@
             "allow": ["Authenticated"]
         }
     },
-    "/mashroom/**": {
+    "/mashroom/admin/**": {
         "*": {
             "allow": ["Administrator"]
         }
