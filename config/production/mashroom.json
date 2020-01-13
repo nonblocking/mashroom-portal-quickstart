@@ -3,13 +3,13 @@
     "port": 5050,
     "pluginPackageFolders": [
         {
-            "path": "../../node_modules/@mashroom",
-            "watch": true
+            "path": "../../node_modules/@mashroom"
         },
         {
-            "path": "../../plugin-packages",
-            "watch": true
+            "path": "../../plugin-packages"
         }],
+    "ignorePlugins": [
+    ],
     "indexPage": "/portal",
     "plugins": {
         "Mashroom Portal WebApp": {

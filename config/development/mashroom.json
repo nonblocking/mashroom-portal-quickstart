@@ -11,7 +11,9 @@
             "path": "../../plugin-packages",
             "devMode": true
         }],
-    "ignorePlugins": ["Mashroom Session Filestore Provider"],
+    "ignorePlugins": [
+        "Mashroom Session Filestore Provider"
+    ],
     "indexPage": "/portal",
     "plugins": {
         "Mashroom Portal WebApp": {
