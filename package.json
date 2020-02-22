@@ -57,7 +57,7 @@
     },
     "scripts": {
         "setup": "npm install && lerna bootstrap --no-ci",
-        "setup-production": "npm ci --production && NODE_ENV=production lerna bootstrap",
+        "setup-production": "npm ci --production && NODE_ENV=production lerna bootstrap --ci",
         "flow": "flow check",
         "lint:config": "eslint --ext .js,.json --fix ./config",
         "lint": "lerna run lint && npm run lint:config",
