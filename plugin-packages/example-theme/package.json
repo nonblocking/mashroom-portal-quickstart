@@ -4,12 +4,12 @@
     "license": "MIT",
     "version": "1.0.0",
     "dependencies": {
-        "express-handlebars": "^3.1.0",
-        "handlebars": "^4.7.2"
+        "express-handlebars": "^4.0.3",
+        "handlebars": "^4.7.6"
     },
     "devDependencies": {
-        "@babel/cli": "^7.8.3",
-        "@fortawesome/fontawesome-free": "^5.12.0",
+        "@babel/cli": "^7.8.4",
+        "@fortawesome/fontawesome-free": "^5.13.0",
         "bootstrap": "^4.4.1",
         "copyfiles": "^2.2.0",
         "node-sass": "^4.13.1",
