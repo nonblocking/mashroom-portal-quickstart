@@ -44,7 +44,8 @@
             "provider": "Mashroom Storage Filestore Provider"
         },
         "Mashroom Storage Filestore Provider": {
-            "dataFolder": "../../data/storage"
+            "dataFolder": "../../data/storage",
+            "checkExternalChangePeriodMs": 2000
         },
         "Mashroom Internationalization Services": {
             "availableLanguages": ["en", "de"],
