@@ -1,4 +1,3 @@
-// @flow
 
 import exphbs from 'express-handlebars';
 import path from 'path';

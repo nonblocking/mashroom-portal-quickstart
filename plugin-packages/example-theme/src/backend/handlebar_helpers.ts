@@ -1,11 +1,10 @@
-// @flow
 /* eslint-disable no-invalid-this */
 
 import context from './context';
 
 import type {UserAgent} from '@mashroom/mashroom-portal/type-definitions';
 
-function equals(lvalue: any, rvalue: any, options: any) {
+function equals(this: any, lvalue: any, rvalue: any, options: any) {
     if (arguments.length < 3) {
         throw new Error('Handlebars Helper equal needs 2 parameters');
     }
@@ -20,14 +19,14 @@ function year() {
     return `<span>${new Date().getFullYear()}</span>`;
 }
 
-function isIE(userAgent: UserAgent, options: any) {
+function isIE(this: any, userAgent: UserAgent, options: any) {
     if (userAgent.browser.name && userAgent.browser.name.startsWith('IE')) {
         return options.fn(this);
     }
     return null;
 }
 
-function i18n(messages: (string) => string, key: string) {
+function i18n(messages: (key: string) => string, key: string) {
     return messages(key) || key;
 }
 
@@ -39,7 +38,7 @@ function mashroomVersion() {
     return context.mashroomVersion;
 }
 
-function ifShowEnvAndVersions(options: any) {
+function ifShowEnvAndVersions(this: any, options: any) {
     if (context.showEnvAndVersions) {
         return options.fn(this);
     }

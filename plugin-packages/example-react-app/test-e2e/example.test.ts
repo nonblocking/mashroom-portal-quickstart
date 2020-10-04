@@ -1,22 +1,21 @@
-// @flow
-
 /*
  * Example Selenium/WebDriver tests that demonstrate how to use the Sandbox App to run an app with different configurations
  * and how to simulate and test the MessageBus communication.
  */
 
 import 'chromedriver';
-import  {Builder, By, until} from 'selenium-webdriver';
+import {Builder, By, until} from 'selenium-webdriver';
+import type {ThenableWebDriver} from 'selenium-webdriver';
 
 const SANDBOX_BASE_URL = 'http://localhost:5050/portal/web/sandbox';
 const APP_NAME = 'Example React App';
 
 describe('Sample React App', () => {
 
-    let driver;
+    let driver: ThenableWebDriver;
 
     beforeEach(async () => {
-        driver = await new Builder()
+        driver = new Builder()
             .forBrowser('chrome')
             .build();
     });

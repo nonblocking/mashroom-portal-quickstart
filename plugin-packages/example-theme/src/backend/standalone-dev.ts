@@ -1,4 +1,3 @@
-// @flow
 /* eslint no-console: off */
 
 import express from 'express';
@@ -235,10 +234,6 @@ app.get('/', (req: ExpressRequest, res: ExpressResponse) => {
     res.render('portal', model);
 });
 
-app.listen(6060, (error: ?Error) => {
-    if (error) {
-        console.error(error);
-        return;
-    }
+app.listen(6060, () => {
     console.info('Server started at port 6060');
 });

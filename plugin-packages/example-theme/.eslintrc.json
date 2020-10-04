@@ -1,11 +1,11 @@
 {
-    "parser": "babel-eslint",
+    "parser": "@typescript-eslint/parser",
     "plugins": [
-        "flowtype"
+        "@typescript-eslint/eslint-plugin"
     ],
     "extends": [
         "eslint:recommended",
-        "plugin:flowtype/recommended"
+        "plugin:@typescript-eslint/recommended"
     ],
     "env": {
         "node": true,
@@ -13,6 +13,8 @@
         "es6": true
     },
     "rules": {
-        "quotes": ["error", "single", { "allowTemplateLiterals": true }]
+        "quotes": ["error", "single", { "allowTemplateLiterals": true }],
+        "@typescript-eslint/no-explicit-any": "off",
+        "@typescript-eslint/explicit-module-boundary-types": "off"
     }
 }

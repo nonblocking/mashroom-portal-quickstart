@@ -1,8 +1,7 @@
-// @flow
 
 type Context = {
-    showEnvAndVersions: boolean,
-    mashroomVersion: string
+    showEnvAndVersions: boolean;
+    mashroomVersion: string;
 }
 
 let context: Context = {

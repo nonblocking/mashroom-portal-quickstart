@@ -1,4 +1,3 @@
-// @flow
 
 import type {MashroomPortalMessageBus} from '@mashroom/mashroom-portal/type-definitions';
 import React, {PureComponent} from 'react';
@@ -9,15 +8,15 @@ type Props = {
 }
 
 type State = {
-    receivedData: ?any,
+    receivedData: any | undefined | null,
 }
 
 export default class App extends PureComponent<Props, State> {
 
-    boundReceiveMessage: (any) => void;
+    boundReceiveMessage: (data: any) => void;
 
-    constructor() {
-        super();
+    constructor(props: Props) {
+        super(props);
         this.state = {
             receivedData: null
         };
@@ -52,19 +51,19 @@ export default class App extends PureComponent<Props, State> {
 
         return (
             <div className='example-react-app'>
-                <p>
+                <div>
                     <strong>Hello {this.props.name}!</strong>
-                </p>
-                <p>
+                </div>
+                <div>
                     <a id='example-app-publish-some-message-link' href='javascript:void(0)' onClick={() => this.sendMessage()}>Publish a Message</a>
-                </p>
+                </div>
                 {receivedData && (
-                    <p>
+                    <div>
                         Received data:
                         <pre id='example-app-received-data'>
                             {JSON.stringify(receivedData, null, 2)}
                         </pre>
-                    </p>
+                    </div>
                 )}
             </div>
         );

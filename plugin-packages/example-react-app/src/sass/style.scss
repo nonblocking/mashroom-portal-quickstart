@@ -1,4 +1,8 @@
 
 .example-react-app {
     padding: 10px;
+
+    &>div {
+        margin-bottom: 10px;
+    }
 }

@@ -1,5 +1,3 @@
-// @flow
-
 import '../sass/style.scss';
 
 import React from 'react';
@@ -21,4 +19,5 @@ const bootstrap: MashroomPortalAppPluginBootstrapFunction = (portalAppHostElemen
     };
 };
 
+// @ts-ignore
 global.startExampleReactApp = bootstrap;
