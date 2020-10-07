@@ -1,7 +1,7 @@
 
 # Mashroom Portal Quickstart
 
-Quickstart template for the [Mashroom Server](https://www.mashroom-server.com) Portal, an **Integration Platform for Microfrontends**. 
+Quickstart template for the [Mashroom Server](https://www.mashroom-server.com) Portal, an **Integration Platform for Microfrontends**.
 
 This template demonstrates how to integrate a standalone React app into the Portal.
 
@@ -17,8 +17,8 @@ Available users:
 * john/john
 * admin/admin
 
-If you start the server without NODE_ENV set it will be in development mode and automatically detect changes in the 
-plugin-packages folder and hot reload plugins. 
+If you start the server without NODE_ENV set it will be in development mode and automatically detect changes in the
+plugin-packages folder and hot reload plugins.
 
 So, if you place the *Example React App* on a page and change its code it will be reloaded automatically.
 
@@ -28,12 +28,12 @@ To run the server within a docker container:
 
     npm run docker:create-image
     npm run docker:start
-    
+
 ### Production hints
 
 To run the server in cluster mode you can start it with PM2 like so:
 
-    NODE_ENV=production pm2 start ./mashroom-starter -i max    
+    NODE_ENV=production pm2 start ./mashroom-starter -i max
 
 ### Start the React app in development mode
 
@@ -53,19 +53,21 @@ There is a set of configuration files for development and production in the conf
 
 ## Storage
 
-The Portal configuration will be stored in _data/storage_. Typically you would put the json files there 
+The Portal configuration will be stored in _data/storage_. Typically, you would put the json files there
 under version control.
 
 ## Plugins
 
-This quickstart template consists of a example React Portal App, a example Theme and example Layouts.
+This quickstart template consists of an example React Portal App, an example Theme and example Layouts.
+The example Theme uses the *handlebars* template engine but you can use every available engine for *express*.
+Here an example of a type safe template written in React: https://github.com/nonblocking/mashroom/blob/master/packages/plugin-packages/mashroom-portal-demo-alternative-theme/src/views/portal.tsx
 
 ### Adding new Plugins
 
-All modules added in the *plugin-packages* folder are automatically scanned.
+All modules added to the *plugin-packages* folders are scanned automatically.
 
-You can also add plugins as *dependencies* in the root *package.json*. 
-In that case you have to add the path to the installed package to the *pluginPackageFolders* in *mashroom.json*.
+You can also add plugins as *dependencies* in the root *package.json*.
+In that case you have to add the path to the installed package (in node_modules) to the *pluginPackageFolders* in *mashroom.json*.
 
 ## Development
 
