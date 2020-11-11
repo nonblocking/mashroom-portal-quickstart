@@ -19,6 +19,7 @@
         "@mashroom/mashroom-portal-admin-app": "^1.6.0",
         "@mashroom/mashroom-portal-default-layouts": "^1.6.0",
         "@mashroom/mashroom-portal-default-theme": "^1.6.0",
+        "@mashroom/mashroom-portal-legacy-browser-support": "^1.6.0",
         "@mashroom/mashroom-portal-demo-alternative-theme": "^1.6.0",
         "@mashroom/mashroom-portal-demo-angular-app": "^1.6.0",
         "@mashroom/mashroom-portal-demo-load-dynamically-app": "^1.6.0",
