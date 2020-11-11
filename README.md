@@ -58,7 +58,7 @@ under version control.
 
 ## Plugins
 
-This quickstart template consists of an example React Portal App, an example Theme and example Layouts.
+This quickstart template consists of an example React Portal App, an example Theme, example Layouts and an example HTTP Proxy Interceptor.
 The example Theme uses the *handlebars* template engine but you can use every available engine for *express*.
 Here an example of a type safe template written in React: https://github.com/nonblocking/mashroom/blob/master/packages/plugin-packages/mashroom-portal-demo-alternative-theme/src/views/portal.tsx
 

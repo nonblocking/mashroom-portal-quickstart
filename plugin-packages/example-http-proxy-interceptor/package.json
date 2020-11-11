@@ -1,0 +1,39 @@
+{
+    "name": "example-http-proxy-interceptor",
+    "description": "Example HTTP proxy interceptor for Mashroom",
+    "license": "MIT",
+    "version": "1.0.0",
+    "devDependencies": {
+        "@babel/cli": "^7.12.1",
+        "eslint": "^7.13.0",
+        "jest": "^26.6.3",
+        "@testing-library/jest-dom": "^5.11.5",
+        "typescript": "^4.0.5"
+    },
+    "scripts": {
+        "test": "jest --passWithNoTests",
+        "build": "babel -x .ts src -d ./dist",
+        "lint": "eslint --quiet --ext .ts --fix ./src",
+        "type-check": "tsc --noEmit"
+    },
+    "jest": {
+        "verbose": true,
+        "transform": {
+            "^.+\\.tsx?$": "babel-jest"
+        }
+    },
+    "mashroom": {
+        "devModeBuildScript": "build",
+        "plugins": [
+            {
+                "name": "Example HTTP Proxy Interceptor",
+                "type": "http-proxy-interceptor",
+                "bootstrap": "./dist/mashroom-bootstrap.js",
+                "defaultConfig": {
+                    "backendUser": "test",
+                    "backendPassword": "test"
+                }
+            }
+        ]
+    }
+}
