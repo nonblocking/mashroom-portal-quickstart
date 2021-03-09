@@ -19,5 +19,4 @@ const bootstrap: MashroomPortalAppPluginBootstrapFunction = (portalAppHostElemen
     };
 };
 
-// @ts-ignore
-global.startExampleReactApp = bootstrap;
+(global as any).startExampleReactApp = bootstrap;

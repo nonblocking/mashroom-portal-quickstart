@@ -5,7 +5,7 @@ import exphbs from 'express-handlebars';
 import helpers from './handlebar_helpers';
 import context from './context';
 
-import type {ExpressRequest, ExpressResponse} from '@mashroom/mashroom/type-definitions';
+import type {Request, Response} from 'express';
 import type {MashroomPortalPageRenderModel} from '@mashroom/mashroom-portal/type-definitions';
 
 context.setContext({
@@ -25,7 +25,7 @@ const hbs = exphbs.create({
 app.engine('handlebars', hbs.engine);
 app.set('view engine', 'handlebars');
 
-app.get('/', (req: ExpressRequest, res: ExpressResponse) => {
+app.get('/', (req: Request, res: Response) => {
 
     const model: MashroomPortalPageRenderModel = {
         portalName: 'Test Portal',

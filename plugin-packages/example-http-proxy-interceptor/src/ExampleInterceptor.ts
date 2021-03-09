@@ -1,23 +1,34 @@
 
+import type {Request, Response} from 'express';
+import type {IncomingMessage} from 'http';
+import type {MashroomLogger} from '@mashroom/mashroom/type-definitions';
 import type {
- HttpHeaders, MashroomHttpProxyInterceptor, MashroomHttpProxyInterceptorResult, QueryParams,
+    HttpHeaders,
+    MashroomHttpProxyInterceptor,
+    QueryParams,
+    MashroomHttpProxyRequestInterceptorResult,
+    MashroomHttpProxyResponseInterceptorResult
 } from '@mashroom/mashroom-http-proxy/type-definitions';
-import type { ExpressRequest, MashroomLogger } from '@mashroom/mashroom/type-definitions';
+import type {MashroomSecurityService} from '@mashroom/mashroom-security/type-definitions';
 
 export default class ExampleInterceptor implements MashroomHttpProxyInterceptor {
 
     constructor(private backendUser: string, private backendPassword: string) {
     }
 
-    async intercept(targetUri: string, existingHeaders: Readonly<HttpHeaders>, existingQueryParams: Readonly<QueryParams>, req: Readonly<ExpressRequest>): Promise<MashroomHttpProxyInterceptorResult | undefined | null> {
-        const logger: MashroomLogger = req.pluginContext.loggerFactory('my.httpProxyInterceptor');
-        const user = req.pluginContext.services.security.service.getUser(req);
+    async interceptRequest(targetUri: string, existingHeaders: Readonly<HttpHeaders>, existingQueryParams: Readonly<QueryParams>,
+                     clientRequest: Request, clientResponse: Response):
+        Promise<MashroomHttpProxyRequestInterceptorResult | undefined | null> {
+
+        const logger: MashroomLogger = clientRequest.pluginContext.loggerFactory('my.httpProxyInterceptor');
+        const securityService: MashroomSecurityService = clientRequest.pluginContext.services.security.service;
+        const user = securityService.getUser(clientRequest);
 
         logger.info(`Intercepted HTTP proxy call to ${targetUri} by user: ${user?.username || 'anonymous'}`);
 
         // TODO: add a Authorization header if necessary
 
-        const interceptorResult: MashroomHttpProxyInterceptorResult = {
+        const interceptorResult: MashroomHttpProxyRequestInterceptorResult = {
             addHeaders: {
 
             },
@@ -29,4 +40,11 @@ export default class ExampleInterceptor implements MashroomHttpProxyInterceptor 
         return interceptorResult;
     }
 
+
+    async interceptResponse(targetUri: string, existingHeaders: Readonly<HttpHeaders>, targetResponse: IncomingMessage,
+                      clientRequest: Request, clientResponse: Response):
+        Promise<MashroomHttpProxyResponseInterceptorResult | undefined | null> {
+
+        return null;
+    }
 }
