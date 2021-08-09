@@ -1,4 +1,5 @@
 {
+    "$schema": "https://www.mashroom-server.com/schemas/mashroom-server-config.json",
     "name": "Mashroom Portal Quickstart",
     "port": 5050,
     "pluginPackageFolders": [
@@ -17,6 +18,12 @@
             "defaultTheme": "Mashroom Portal Default Theme",
             "warnBeforeAuthenticationExpiresSec": 120
         },
+        "Mashroom Portal Remote App Registry": {
+            "remotePortalAppUrls": "./remotePortalApps.json"
+        },
+        "Mashroom Portal Remote App Registry Admin Webapp": {
+            "showAddRemoteAppForm": false
+        },
         "Mashroom Session Middleware": {
             "provider": "Mashroom Session Filestore Provider",
             "session": {
@@ -30,8 +37,7 @@
         },
         "Mashroom Security Services": {
             "provider": "Mashroom Security Simple Provider",
-            "acl": "./acl.json",
-            "loginPage": "/login"
+            "acl": "./acl.json"
         },
         "Mashroom Security Simple Provider": {
             "users": "./users.json",
@@ -52,7 +58,7 @@
             "defaultLanguage": "en"
         },
         "Mashroom Http Proxy Services": {
-            "rejectUntrustedCerts": false,
+            "rejectUnauthorized": false,
             "poolMaxSockets": 10
         },
         "Mashroom WebSocket Webapp": {
@@ -67,7 +73,7 @@
             "externalTopics": [],
             "userPrivateBaseTopic": "user",
             "enableWebSockets": true,
-            "topicACL": "./topic_acl.json"
+            "topicACL": "./topicACL.json"
         }
     }
 }
