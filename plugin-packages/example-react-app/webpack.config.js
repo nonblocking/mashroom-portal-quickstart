@@ -1,4 +1,7 @@
 
+const path = require('path');
+const ESLintPlugin = require('eslint-webpack-plugin');
+
 module.exports = {
     entry: __dirname + '/src/js/index',
     output: {
@@ -8,20 +11,6 @@ module.exports = {
     target: ['web', 'es5'],
     module: {
         rules: [
-            {
-                test: /\.(ts|tsx)$/,
-                exclude: /node_modules/,
-                enforce: 'pre',
-                use: [
-                    {
-                        loader: 'eslint-loader',
-                        options: {
-                            fix: false,
-                            configFile: __dirname + '/.eslintrc.json',
-                        },
-                    },
-                ],
-            },
             {
                 test: /\.(ts|tsx)$/,
                 exclude: /node_modules/,
@@ -56,15 +45,21 @@ module.exports = {
         ],
     },
     externals: [],
+    plugins: [
+        new ESLintPlugin({
+            fix: false,
+            overrideConfigFile: __dirname + '/.eslintrc.json',
+        })
+    ],
     resolve: {
         extensions: ['.js', '.ts', '.tsx'],
     },
     devServer: {
-        inline: true,
         host: '0.0.0.0',
-        disableHostCheck: true,
         port: 8080,
-        contentBase: 'src',
-        open: true
+        open: true,
+        static: {
+            directory: path.join(__dirname, 'src'),
+        },
     },
 };

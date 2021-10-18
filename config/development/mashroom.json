@@ -67,6 +67,11 @@
             "rejectUnauthorized": false,
             "poolMaxSockets": 10
         },
+        "Mashroom Http Proxy Add User Headers Interceptor": {
+            "targetUris": [
+                "localhost"
+            ]
+        },
         "Mashroom WebSocket Webapp": {
             "restrictToRoles": null,
             "enableKeepAlive": false,

@@ -29,7 +29,6 @@ app.get('/', (req: Request, res: Response) => {
 
     const model: MashroomPortalPageRenderModel = {
         portalName: 'Test Portal',
-        portalBasePath: '/portal',
         siteBasePath: '/portal/web',
         lang: 'en',
         availableLanguages: ['en', 'de', 'fr'],
@@ -99,7 +98,8 @@ app.get('/', (req: Request, res: Response) => {
         },
         portalResourcesHeader: '',
         portalResourcesFooter: '',
-        portalLayout: `
+        portalLayout: '',
+        pageContent: `
             <div class="row">
                 <div class="mashroom-portal-app-area col-md-6" id="app-area1">
                     <div class="mashroom-portal-app-wrapper">
