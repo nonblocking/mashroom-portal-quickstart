@@ -36,19 +36,14 @@ module.exports = {
             },
             {
                 test: /\.(png|gif|jpg|jpeg|ttf|eot|woff(2)?)$/,
-                use: [
-                    {
-                        loader: 'file-loader',
-                    },
-                ],
+                type: 'asset/resource'
             },
         ],
     },
     externals: [],
     plugins: [
         new ESLintPlugin({
-            fix: false,
-            overrideConfigFile: __dirname + '/.eslintrc.json',
+            fix: true,
         })
     ],
     resolve: {
