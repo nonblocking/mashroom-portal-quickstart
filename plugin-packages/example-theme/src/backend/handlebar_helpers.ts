@@ -1,6 +1,7 @@
-/* eslint-disable no-invalid-this */
-
 import context from './context';
+
+// eslint-disable-next-line @typescript-eslint/no-var-requires
+const packageJson = require('../package.json');
 
 import type {UserAgent} from '@mashroom/mashroom-portal/type-definitions';
 
@@ -38,6 +39,14 @@ function mashroomVersion() {
     return context.mashroomVersion;
 }
 
+function bootstrapVersion(): string {
+    return packageJson.devDependencies['bootstrap']?.replace(/[^]/, '');
+}
+
+function fontawesomeVersion(): string {
+    return packageJson.devDependencies['@fortawesome/fontawesome-free']?.replace(/[^]/, '');
+}
+
 function ifShowEnvAndVersions(this: any, options: any) {
     if (context.showEnvAndVersions) {
         return options.fn(this);
@@ -51,6 +60,8 @@ export default {
     isIE,
     env,
     mashroomVersion,
+    bootstrapVersion,
+    fontawesomeVersion,
     ifShowEnvAndVersions,
     '__': i18n,
 };
