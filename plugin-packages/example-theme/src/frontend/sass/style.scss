@@ -1,4 +1,6 @@
 
+@use "sass:math";
+
 $COLOR_BLACK: #343633;
 $COLOR_WHITE: white;
 $COLOR_GREY: #888;
@@ -55,6 +57,10 @@ $GUTTER_WIDTH: 15px;
 /* Remove Chrome's input focus border */
 :focus {
     outline: none !important;
+}
+
+::placeholder {
+    color: $COLOR_GREY_LIGHT;
 }
 
 body {
@@ -1049,7 +1055,7 @@ footer {
         nav {
             margin-bottom: 0;
             display: block;
-            margin-right: $GUTTER_WIDTH / 2;
+            margin-right: span math.div($GUTTER_WIDTH, 2);
             margin-top: 0;
         }
     }
