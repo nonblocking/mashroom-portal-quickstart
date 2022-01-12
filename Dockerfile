@@ -1,4 +1,4 @@
-FROM node:10-slim
+FROM node:14-slim
 WORKDIR /opt/app
 COPY lerna.json mashroom-starter.js package.json package-lock.json ./
 COPY ./config ./config
