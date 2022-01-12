@@ -1,5 +1,5 @@
 
-import exphbs from 'express-handlebars';
+import {engine} from 'express-handlebars';
 import path from 'path';
 import helpers from './handlebar_helpers';
 import context from './context';
@@ -16,12 +16,11 @@ const bootstrap: MashroomPortalThemePluginBootstrapFunction = async (pluginName,
     return {
         engineName: 'handlebars',
         engineFactory: () => {
-            const hbs = exphbs.create({
+            return engine({
                 helpers,
                 partialsDir: path.resolve(__dirname, '../views/partials/'),
                 defaultLayout: '',
             });
-            return hbs.engine;
         },
     };
 };
