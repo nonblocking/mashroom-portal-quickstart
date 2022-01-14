@@ -1,5 +1,2 @@
 
-**/node_modules
-**/src
-.babelrc
-.eslintrc.json
+plugin-packages/*/node_modules

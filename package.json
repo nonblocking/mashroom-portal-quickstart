@@ -66,13 +66,12 @@
     },
     "scripts": {
         "setup": "npm install && lerna bootstrap --no-ci",
-        "setup-production": "npm ci --production && NODE_ENV=production lerna bootstrap --ci",
         "type-check": "lerna run type-check",
         "lint": "lerna run lint",
         "test": "lerna run test",
         "build": "npm run type-check && npm run lint && lerna run build",
         "start": "node ./mashroom-starter",
-        "docker:create-image": "npm run setup && npm run build && docker build -t mashroom-portal-quickstart .",
-        "docker:start": "docker run -e NODE_ENV=production -p 5050:5050 mashroom-portal-quickstart "
+        "docker:create-image": "docker build -t mashroom-portal-quickstart .",
+        "docker:start": "docker run -e NODE_ENV=production -p 5050:5050 mashroom-portal-quickstart"
     }
 }
