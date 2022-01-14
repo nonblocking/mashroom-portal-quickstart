@@ -67,7 +67,8 @@
     "scripts": {
         "setup": "npm install && lerna bootstrap --no-ci",
         "type-check": "lerna run type-check",
-        "lint": "lerna run lint",
+        "lint:config": "eslint --ext .js,.json --fix ./config",
+        "lint": "lerna run lint && npm run lint:config",
         "test": "lerna run test",
         "build": "npm run type-check && npm run lint && lerna run build",
         "start": "node ./mashroom-starter",

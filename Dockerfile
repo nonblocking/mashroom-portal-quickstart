@@ -1,6 +1,7 @@
 # Builder
 FROM node:16-slim as builder
 WORKDIR /opt/app
+COPY ./config ./config
 COPY ./plugin-packages ./plugin-packages
 COPY *.json ./
 RUN npm ci && ./node_modules/.bin/lerna bootstrap --ci
