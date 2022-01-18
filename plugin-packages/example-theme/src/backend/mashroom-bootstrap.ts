@@ -7,8 +7,9 @@ import context from './context';
 import type {MashroomPortalThemePluginBootstrapFunction} from '@mashroom/mashroom-portal/type-definitions';
 
 const bootstrap: MashroomPortalThemePluginBootstrapFunction = async (pluginName, pluginConfig, contextHolder) => {
-    const { showEnvAndVersions } = pluginConfig;
+    const { spaMode, showEnvAndVersions } = pluginConfig;
     context.setContext({
+        spaMode,
         showEnvAndVersions,
         mashroomVersion: contextHolder.getPluginContext().serverInfo.version,
     });

@@ -54,6 +54,13 @@ function ifShowEnvAndVersions(this: any, options: any) {
     return null;
 }
 
+function ifSpaMode(this: any, options: any): any {
+    if (!context.spaMode) {
+        return options.inverse(this);
+    }
+    return options.fn(this);
+}
+
 export default {
     equals,
     year,
@@ -63,5 +70,6 @@ export default {
     bootstrapVersion,
     fontawesomeVersion,
     ifShowEnvAndVersions,
+    ifSpaMode,
     '__': i18n,
 };
