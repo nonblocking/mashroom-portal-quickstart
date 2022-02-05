@@ -1,0 +1,35 @@
+
+$COLOR_BLACK: #343633;
+$COLOR_WHITE: white;
+$COLOR_GREY: #888;
+$COLOR_GREY_LIGHT: #999;
+$COLOR_ERROR: red;
+
+$COLOR_PRIMARY: #253C78;
+$COLOR_PRIMARY_LIGHT: #7482A9;
+$COLOR_PRIMARY_DARK: #18274D;
+$COLOR_PRIMARY_EXTRA_LIGHT: lighten($COLOR_PRIMARY_LIGHT, 25);
+
+$COLOR_SECONDARY: #79AEA3;
+$COLOR_SECONDARY_LIGHT: #A9CBC4;
+$COLOR_SECONDARY_DARK: #4E6F68;
+
+$ADMIN_APP_COLOR_BACKGROUND: $COLOR_BLACK;
+$ADMIN_APP_COLOR_BACKGROUND_LIGHT: lighten($ADMIN_APP_COLOR_BACKGROUND, 10);
+$ADMIN_APP_COLOR_BACKGROUND_LIGHTER: lighten($ADMIN_APP_COLOR_BACKGROUND, 20);
+$ADMIN_APP_COLOR_TEXT: white;
+$ADMIN_APP_COLOR_TEXT_DARK: lighten($ADMIN_APP_COLOR_BACKGROUND, 50);
+
+$FONT_DEFAULT: Arial, sans-serif;
+$FONT_HEADER: Georgia, serif;
+$FONT_ICON: 'Font Awesome 5 Free';
+
+$GUTTER_WIDTH: 15px;
+
+@mixin hover-animation() {
+    transition: color 500ms ease-out, background-color 500ms ease-out;
+}
+
+@mixin focus-animation() {
+    transition: color 500ms ease-out, border-color 500ms ease-out;
+}

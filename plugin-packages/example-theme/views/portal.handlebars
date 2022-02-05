@@ -17,11 +17,13 @@
        <!-- add some polyfills -->
     {{/isIE}}
 
-    <link rel="shortcut icon" type="image/x-icon" href="{{resourcesBasePath}}/assets/mashroom_favicon.ico">
-    <link rel="stylesheet" type="text/css" href="{{resourcesBasePath}}/bootstrap/css/bootstrap.css?v={{bootstrapVersion}}">
+    <link rel="shortcut icon" type="image/x-icon" href="{{resourcesBasePath}}/assets/logo-white.ico">
+
+    {{{inlineStyle 'portal.css'}}}
+    <link rel="stylesheet" type="text/css" href="{{resourcesBasePath}}/admin.css?v={{lastThemeReloadTs}}">
+
     <link rel="stylesheet" type="text/css" href="{{resourcesBasePath}}/fontawesome/css/regular.css?v={{fontawesomeVersion}}">
     <link rel="stylesheet" type="text/css" href="{{resourcesBasePath}}/fontawesome/css/solid.css?v={{fontawesomeVersion}}">
-    <link rel="stylesheet" type="text/css" href="{{resourcesBasePath}}/style.css?v={{lastThemeReloadTs}}">
 
     {{{portalResourcesHeader}}}
 
@@ -40,7 +42,7 @@
 
     <header>
         <div class="logo">
-            <img src="{{resourcesBasePath}}/assets/mashroom_logo.svg"/>
+            {{{ inlineSVG 'logo-white.svg'}}}
         </div>
         <div class="site-name">
             <h1>{{site.title}}</h1>
