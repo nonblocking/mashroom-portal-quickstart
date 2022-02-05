@@ -1,3 +1,6 @@
+
+import {readFileSync} from 'fs';
+import {resolve} from 'path';
 import context from './context';
 
 // eslint-disable-next-line @typescript-eslint/no-var-requires
@@ -39,10 +42,6 @@ function mashroomVersion() {
     return context.mashroomVersion;
 }
 
-function bootstrapVersion(): string {
-    return packageJson.devDependencies['bootstrap']?.replace(/[^]/, '');
-}
-
 function fontawesomeVersion(): string {
     return packageJson.devDependencies['@fortawesome/fontawesome-free']?.replace(/[^]/, '');
 }
@@ -61,13 +60,32 @@ function ifSpaMode(this: any, options: any): any {
     return options.fn(this);
 }
 
+function inlineStyle(cssFile: string): string {
+    try {
+        const file = readFileSync(resolve(__dirname, 'public', cssFile));
+        return `<style>${file.toString('utf-8')}</style>`;
+    } catch (e) {
+        return `<!-- Error: CSS file not found: ${cssFile} -->`;
+    }
+}
+
+function inlineSVG(assetFile: string): string {
+    try {
+        const file = readFileSync(resolve(__dirname, 'public/assets', assetFile));
+        return file.toString('utf-8');
+    } catch (e) {
+        return `<!-- Error: SVG file not found: ${assetFile} -->`;
+    }
+}
+
 export default {
     equals,
     year,
     isIE,
     env,
+    inlineStyle,
+    inlineSVG,
     mashroomVersion,
-    bootstrapVersion,
     fontawesomeVersion,
     ifShowEnvAndVersions,
     ifSpaMode,
