@@ -19,11 +19,13 @@
 
     <link rel="shortcut icon" type="image/x-icon" href="{{resourcesBasePath}}/assets/logo-white.ico">
 
-    {{{inlineStyle 'portal.css'}}}
-    <link rel="stylesheet" type="text/css" href="{{resourcesBasePath}}/admin.css?v={{lastThemeReloadTs}}">
 
     <link rel="stylesheet" type="text/css" href="{{resourcesBasePath}}/fontawesome/css/regular.css?v={{fontawesomeVersion}}">
     <link rel="stylesheet" type="text/css" href="{{resourcesBasePath}}/fontawesome/css/solid.css?v={{fontawesomeVersion}}">
+    {{{inlineStyle 'portal.css'}}}
+    {{#if user.admin}}
+        <link rel="stylesheet" type="text/css" href="{{resourcesBasePath}}/admin.css?v={{lastThemeReloadTs}}">
+    {{/if}}
 
     {{{portalResourcesHeader}}}
 
@@ -33,7 +35,7 @@
         </style>
     {{/if}}
 
-     <script type="application/javascript" src="{{resourcesBasePath}}/main.js?v={{lastThemeReloadTs}}"></script>
+    <script type="application/javascript" src="{{resourcesBasePath}}/main.js?v={{lastThemeReloadTs}}"></script>
 </head>
 <body>
     <div id="mashroom-portal-admin-app-container">
