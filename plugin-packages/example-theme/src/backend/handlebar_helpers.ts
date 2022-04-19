@@ -53,13 +53,6 @@ function ifShowEnvAndVersions(this: any, options: any) {
     return null;
 }
 
-function ifSpaMode(this: any, options: any): any {
-    if (!context.spaMode) {
-        return options.inverse(this);
-    }
-    return options.fn(this);
-}
-
 function inlineStyle(cssFile: string): string {
     try {
         const file = readFileSync(resolve(__dirname, 'public', cssFile));
@@ -88,6 +81,5 @@ export default {
     mashroomVersion,
     fontawesomeVersion,
     ifShowEnvAndVersions,
-    ifSpaMode,
     '__': i18n,
 };

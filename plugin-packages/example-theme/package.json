@@ -40,7 +40,6 @@
                 "resourcesRoot": "./dist/public",
                 "views": "./views",
                 "defaultConfig": {
-                    "spaMode": true,
                     "showEnvAndVersions": false
                 }
             }

@@ -9,7 +9,6 @@ import type {Request, Response} from 'express';
 import type {MashroomPortalPageRenderModel} from '@mashroom/mashroom-portal/type-definitions';
 
 context.setContext({
-    spaMode: false,
     showEnvAndVersions: true,
     mashroomVersion: '1.0.0'
 });
