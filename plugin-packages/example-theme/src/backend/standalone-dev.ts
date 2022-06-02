@@ -42,6 +42,7 @@ app.get('/', (req: Request, res: Response) => {
         apiBasePath: '/api',
         resourcesBasePath: '/resources',
         lastThemeReloadTs: Date.now(),
+        themeVersionHash: 'xxxx',
         site: {
             siteId: 'test',
             title: 'Test Site',
