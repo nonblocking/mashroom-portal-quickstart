@@ -5,16 +5,5 @@
     "version": "1.0.0",
     "files": [
         "layouts/**"
-    ],
-    "mashroom": {
-        "plugins": [
-            {
-                "name": "Example Layouts",
-                "type": "portal-layouts",
-                "layouts": {
-                    "2 Columns": "./layouts/2columns.html"
-                }
-            }
-        ]
-    }
+    ]
 }

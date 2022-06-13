@@ -4,10 +4,10 @@
     "license": "MIT",
     "version": "1.0.0",
     "devDependencies": {
-        "@babel/cli": "^7.16.8",
-        "eslint": "^8.6.0",
-        "jest": "^27.4.7",
-        "typescript": "^4.5.4"
+        "@babel/cli": "^7.17.10",
+        "eslint": "^8.17.0",
+        "jest": "^28.1.1",
+        "typescript": "^4.7.3"
     },
     "scripts": {
         "test": "jest --passWithNoTests",
@@ -20,19 +20,5 @@
         "transform": {
             "^.+\\.tsx?$": "babel-jest"
         }
-    },
-    "mashroom": {
-        "devModeBuildScript": "build",
-        "plugins": [
-            {
-                "name": "Example HTTP Proxy Interceptor",
-                "type": "http-proxy-interceptor",
-                "bootstrap": "./dist/mashroom-bootstrap.js",
-                "defaultConfig": {
-                    "backendUser": "test",
-                    "backendPassword": "test"
-                }
-            }
-        ]
     }
 }

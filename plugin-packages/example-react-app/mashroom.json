@@ -1,0 +1,38 @@
+{
+    "$schema": "../../node_modules/@mashroom/mashroom-json-schemas/schemas/mashroom-plugins.json",
+    "devModeBuildScript": "build",
+    "plugins": [
+        {
+            "name": "Example React App",
+            "title": {
+                "en": "Example React App",
+                "de": "Beispiel React App"
+            },
+            "category": "Examples",
+            "type": "portal-app",
+            "bootstrap": "startExampleReactApp",
+            "resources": {
+                "js": [
+                    "bundle.js"
+                ],
+                "css": []
+            },
+            "defaultConfig": {
+                "resourcesRoot": "./dist",
+                "restProxies": {},
+                "rolePermissions": {
+                    "edit": [
+                        "RoleMyAppEdit",
+                        "Administrator"
+                    ],
+                    "doEverything": [
+                        "Administrator"
+                    ]
+                },
+                "appConfig": {
+                    "name": "World"
+                }
+            }
+        }
+    ]
+}

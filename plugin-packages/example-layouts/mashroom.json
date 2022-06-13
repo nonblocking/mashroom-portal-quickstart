@@ -1,0 +1,12 @@
+{
+    "$schema": "../../node_modules/@mashroom/mashroom-json-schemas/schemas/mashroom-plugins.json",
+    "plugins": [
+        {
+            "name": "Example Layouts",
+            "type": "portal-layouts",
+            "layouts": {
+                "2 Columns": "./layouts/2columns.html"
+            }
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "$schema": "../../node_modules/@mashroom/mashroom-json-schemas/schemas/mashroom-plugins.json",
+    "devModeBuildScript": "build",
+    "plugins": [
+        {
+            "name": "Example HTTP Proxy Interceptor",
+            "type": "http-proxy-interceptor",
+            "bootstrap": "./dist/mashroom-bootstrap.js",
+            "defaultConfig": {
+                "backendUser": "test",
+                "backendPassword": "test"
+            }
+        }
+    ]
+}

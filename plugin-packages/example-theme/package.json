@@ -4,22 +4,22 @@
     "license": "MIT",
     "version": "1.0.0",
     "dependencies": {
-        "express-handlebars": "^6.0.2",
+        "express-handlebars": "^6.0.6",
         "handlebars": "^4.7.7"
     },
     "devDependencies": {
-        "@babel/cli": "^7.16.8",
-        "eslint": "^8.6.0",
+        "@babel/cli": "^7.17.10",
+        "eslint": "^8.17.0",
         "@fortawesome/fontawesome-free": "^5.15.4",
         "bootstrap": "^5.1.3",
         "copyfiles": "^2.4.1",
-        "sass": "^1.47.0",
-        "typescript": "^4.5.4",
+        "sass": "^1.52.3",
+        "typescript": "^4.7.3",
         "@types/express-handlebars": "^6.0.0",
-        "nodemon": "^2.0.15",
-        "webpack": "^5.66.0",
-        "webpack-cli": "^4.9.1",
-        "babel-loader": "^8.2.3"
+        "nodemon": "^2.0.16",
+        "webpack": "^5.73.0",
+        "webpack-cli": "^4.10.0",
+        "babel-loader": "^8.2.5"
     },
     "scripts": {
         "lint": "eslint --fix src",
@@ -29,20 +29,5 @@
         "build:frontend": "webpack --mode production && sass --style compressed --load-path=. src/frontend/sass/portal.scss:dist/public/portal.css src/frontend/sass/admin.scss:dist/public/admin.css",
         "build:copy-assets": "copyfiles -u 1 src/assets/* dist/public && copyfiles -u 3 node_modules/@fortawesome/fontawesome-free/**/* dist/public/fontawesome",
         "build": "npm run build:backend && npm run build:frontend  && npm run build:copy-assets"
-    },
-    "mashroom": {
-        "devModeBuildScript": "build",
-        "plugins": [
-            {
-                "name": "Example Theme",
-                "type": "portal-theme",
-                "bootstrap": "./dist/mashroom-bootstrap.js",
-                "resourcesRoot": "./dist/public",
-                "views": "./views",
-                "defaultConfig": {
-                    "showEnvAndVersions": false
-                }
-            }
-        ]
     }
 }

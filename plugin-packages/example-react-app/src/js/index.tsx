@@ -1,7 +1,7 @@
 import '../sass/style.scss';
 
 import React from 'react';
-import ReactDOM from 'react-dom';
+import {createRoot} from 'react-dom/client';
 import App from './App';
 
 import type {MashroomPortalAppPluginBootstrapFunction} from '@mashroom/mashroom-portal/type-definitions';
@@ -10,11 +10,12 @@ const bootstrap: MashroomPortalAppPluginBootstrapFunction = (portalAppHostElemen
     const { appConfig: { name } } = portalAppSetup;
     const { messageBus } = clientServices;
 
-    ReactDOM.render(<App name={name} messageBus={messageBus}/>, portalAppHostElement);
+    const root = createRoot(portalAppHostElement);
+    root.render(<App name={name} messageBus={messageBus}/>);
 
     return {
         willBeRemoved: () => {
-            ReactDOM.unmountComponentAtNode(portalAppHostElement);
+            root.unmount();
         },
     };
 };
