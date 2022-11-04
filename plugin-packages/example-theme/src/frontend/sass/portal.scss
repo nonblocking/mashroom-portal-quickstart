@@ -1,5 +1,6 @@
 
 @use "sass:math";
+@use "sass:meta";
 @use "variables" as *;
 
 // Reset styles
@@ -24,6 +25,10 @@
     color: $COLOR_GREY_LIGHT;
 }
 
+:root {
+    --mashroom-portal-font-icon: #{meta.inspect($FONT_ICON)};
+}
+
 body {
     -webkit-font-smoothing: antialiased;
     -webkit-text-size-adjust: 100%;
@@ -35,7 +40,6 @@ body {
     color: $COLOR_BLACK;
     font-family: $FONT_DEFAULT;
 }
-
 
 h1, h2, h3 {
     font-family: $FONT_HEADER;

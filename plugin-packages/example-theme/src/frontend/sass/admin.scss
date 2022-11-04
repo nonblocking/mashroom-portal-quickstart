@@ -4,6 +4,7 @@
 
 #mashroom-portal-admin-app-container {
     background-color: $COLOR_BLACK;
+    height: 32px;
 
     .mashroom-portal-app-wrapper {
         min-height: 32px;
@@ -14,9 +15,12 @@
         }
     }
 
-    .mashroom-portal-app-loading:before {
-        color: $COLOR_WHITE;
-        font-size: 14px;
+    .mashroom-portal-app-loading {
+        min-height: 32px;
+
+        span {
+            display: none;
+        }
     }
 }
 
@@ -46,27 +50,27 @@
 
     .dropdown-menu-button {
         &:hover {
-            background-color: $ADMIN_APP_COLOR_BACKGROUND_LIGHTER;
+            background-color: $ADMIN_APP_COLOR_BACKGROUND_LIGHT;
         }
     }
 
     .portal-apps-control-toggle {
         &:hover {
-            background-color: $ADMIN_APP_COLOR_BACKGROUND_LIGHTER;
+            background-color: $ADMIN_APP_COLOR_BACKGROUND_LIGHT;
         }
     }
 
     a, a:visited, a:focus {
         color: $ADMIN_APP_COLOR_TEXT;
-        text-decoration: underline;
+        text-decoration: none;
         @include hover-animation();
 
         &:hover {
-            color: $COLOR_SECONDARY;
+            text-decoration: underline;
         }
 
         &:active {
-            color: $COLOR_SECONDARY;
+            text-decoration: underline;
         }
     }
 
@@ -111,7 +115,7 @@
         }
     }
 
-    .mashroom-portal-radio  {
+    .mashroom-portal-radio {
         & + label {
             &:before {
                 color: $ADMIN_APP_COLOR_TEXT_DARK;
@@ -126,7 +130,7 @@
     }
 
     input[type="text"], input[type="number"], input[type="password"], input[type="tel"], input[type="search"], textarea {
-        background-color: $ADMIN_APP_COLOR_BACKGROUND_LIGHT;
+        background-color: $ADMIN_APP_COLOR_INPUT_BACKGROUND;
         border-color: $ADMIN_APP_COLOR_BACKGROUND_LIGHTER;
         color: $ADMIN_APP_COLOR_TEXT;
 
@@ -136,13 +140,13 @@
     }
 
     select {
-        background-color: $ADMIN_APP_COLOR_BACKGROUND_LIGHT;
+        background-color: $ADMIN_APP_COLOR_INPUT_BACKGROUND;
         border-color: $ADMIN_APP_COLOR_BACKGROUND_LIGHTER;
         color: $ADMIN_APP_COLOR_TEXT;
 
         option {
             color: $ADMIN_APP_COLOR_TEXT;
-            background-color: $ADMIN_APP_COLOR_BACKGROUND_LIGHT;
+            background-color: $ADMIN_APP_COLOR_INPUT_BACKGROUND;
         }
 
         &:focus {
@@ -154,6 +158,23 @@
         background-color: $ADMIN_APP_COLOR_BACKGROUND_LIGHTER;
         border: 1px solid transparent;
         color: $ADMIN_APP_COLOR_TEXT;
+
+        &.secondary {
+            background-color: transparent;
+            border-color: $ADMIN_APP_COLOR_BACKGROUND_LIGHTER;
+
+            &:hover, &:active {
+                color: $ADMIN_APP_COLOR_TEXT;
+            }
+
+            &[disabled] {
+                &:hover, &:active {
+                    color: $COLOR_GREY;
+                    border-color: $ADMIN_APP_COLOR_BACKGROUND_LIGHTER;
+                    background-color: $ADMIN_APP_COLOR_BACKGROUND_LIGHTER;
+                }
+            }
+        }
 
         &:hover {
             background-color: $ADMIN_APP_COLOR_BACKGROUND_LIGHT;
@@ -174,8 +195,18 @@
     }
 
     .mashroom-portal-ui-field-label {
-        color: $COLOR_GREY;
+        color: $ADMIN_APP_COLOR_TEXT_DARK;
 
+    }
+
+    .mashroom-portal-ui-source-code-editor-field {
+        .cm-editor {
+            border-color: $ADMIN_APP_COLOR_BACKGROUND_LIGHTER;
+
+            &.cm-focused {
+                border-color: $COLOR_SECONDARY;
+            }
+        }
     }
 
     .mashroom-portal-ui-dropdown-menu {
@@ -197,7 +228,7 @@
 
     .mashroom-portal-ui-modal {
         .mashroom-portal-ui-modal-header {
-            background-color: $ADMIN_APP_COLOR_BACKGROUND_LIGHTER;
+            background-color: $ADMIN_APP_COLOR_BACKGROUND_LIGHT;
         }
 
         .mashroom-portal-ui-modal-content {
@@ -225,7 +256,7 @@
     .tool-button {
         color: $ADMIN_APP_COLOR_TEXT;
         background-color: $ADMIN_APP_COLOR_BACKGROUND;
-        opacity: 0.6;
+        opacity: 0.7;
 
         &:hover {
             opacity: 1;
@@ -236,4 +267,20 @@
 .mashroom-portal-admin-drag-ghost {
     color: $COLOR_WHITE;
     background-color: $ADMIN_APP_COLOR_BACKGROUND_LIGHT;
+}
+
+.mashroom-portal-ui-tab-dialog {
+    .tab-dialog-header {
+        .tab-dialog-button {
+            background-color: $ADMIN_APP_COLOR_BACKGROUND_LIGHTER;
+
+            &:hover {
+                background-color: $ADMIN_APP_COLOR_BACKGROUND_LIGHT;
+            }
+
+            &.active {
+                background-color: $COLOR_PRIMARY;
+            }
+        }
+    }
 }
