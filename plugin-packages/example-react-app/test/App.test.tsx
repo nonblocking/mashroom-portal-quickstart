@@ -25,6 +25,9 @@ describe('App', () => {
             sendMessage({ foo: 'bar' });
         }
 
+        // Wait for microtasks to finish
+        await new Promise((resolve) => setTimeout(resolve, 100));
+
         expect(container.querySelector('#example-app-received-data')).not.toBeNull();
     });
 

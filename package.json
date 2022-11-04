@@ -62,6 +62,8 @@
         "eslint-plugin-jsx-a11y": "^6.6.1",
         "eslint-plugin-react": "^7.31.10",
         "eslint-plugin-json": "^3.1.0",
+        "jest": "^28.1.1",
+        "jest-environment-jsdom": "^29.2.2",
         "webpack-cli": "^4.10.0",
         "webpack": "^5.74.0",
         "webpack-dev-server": "^4.11.1",
@@ -83,7 +85,7 @@
         "lint:config": "eslint --ext .js,.json --fix ./config",
         "lint": "lerna run lint && npm run lint:config",
         "test": "lerna run test",
-        "build": "npm run type-check && npm run lint && lerna run build",
+        "build": "npm run type-check && npm run lint && npm run test && lerna run build",
         "start": "node ./mashroom-starter",
         "docker:create-image": "docker build -t mashroom-portal-quickstart .",
         "docker:start": "docker run -e NODE_ENV=production -p 5050:5050 mashroom-portal-quickstart"
