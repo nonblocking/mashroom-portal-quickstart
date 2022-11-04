@@ -5,6 +5,10 @@ Quickstart template for the [Mashroom Server](https://www.mashroom-server.com) P
 
 This template demonstrates how to integrate a standalone React app into the Portal.
 
+## Prerequisites
+
+* Node.js >= 16
+
 ## Start the server
 
 * npm run setup
