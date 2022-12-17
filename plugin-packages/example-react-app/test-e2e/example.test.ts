@@ -4,7 +4,7 @@
  */
 
 import 'chromedriver';
-import {Builder, By, until} from 'selenium-webdriver';
+import {Builder, By, until, Key} from 'selenium-webdriver';
 import type {ThenableWebDriver} from 'selenium-webdriver';
 
 const SANDBOX_BASE_URL = 'http://localhost:5050/portal/web/sandbox';
@@ -29,14 +29,14 @@ describe('Sample React App', () => {
         await driver.findElement(By.name('_password')).sendKeys('john');
         await driver.findElement(By.id('login-form-submit')).click();
 
-        await driver.wait(until.elementLocated(By.className('example-react-app')));
+        await driver.wait(until.elementLocated(By.id('mashroom-sandbox-publish-message-topic')));
     };
 
     it('processes the config parameter name correctly', async () => {
         const name = 'Maximilian';
 
         const appConfigParamValue = btoa(JSON.stringify({ name }));
-        const url = `${SANDBOX_BASE_URL}?sbAppName=${APP_NAME}&sbAppConfig=${appConfigParamValue}`;
+        const url = `${SANDBOX_BASE_URL}?sbAutoTest=1&sbAppName=${APP_NAME}&sbAppConfig=${appConfigParamValue}`;
         await driver.get(url);
 
         await loginAndWaitForApp();
@@ -48,7 +48,7 @@ describe('Sample React App', () => {
     });
 
     it('publishes the correct message', async () => {
-        const url = `${SANDBOX_BASE_URL}?sbAppName=${APP_NAME}`;
+        const url = `${SANDBOX_BASE_URL}?sbAutoTest=1&sbAppName=${APP_NAME}`;
         await driver.get(url);
 
         await loginAndWaitForApp();
@@ -67,13 +67,16 @@ describe('Sample React App', () => {
     });
 
     it('processes a subscribed message correctly', async () => {
-        const url = `${SANDBOX_BASE_URL}?sbAppName=${APP_NAME}`;
+        const url = `${SANDBOX_BASE_URL}?sbAutoTest=1&sbAppName=${APP_NAME}`;
         await driver.get(url);
 
         await loginAndWaitForApp();
+        await setTimeout((resolve) => setTimeout(resolve, 2000));
 
         await driver.findElement(By.id('mashroom-sandbox-publish-message-topic')).sendKeys('dummy-topic');
-        await driver.findElement(By.id('mashroom-sandbox-publish-message-message')).clear();
+        console.info(await driver.findElement(By.id('mashroom-sandbox-publish-message-message')));
+        // await driver.findElement(By.id('mashroom-sandbox-publish-message-message')).clear(); // Doesn't work?
+        await driver.findElement(By.id('mashroom-sandbox-publish-message-message')).sendKeys(Key.BACK_SPACE, Key.BACK_SPACE, Key.BACK_SPACE,  Key.BACK_SPACE);
         await driver.findElement(By.id('mashroom-sandbox-publish-message-message')).sendKeys('{ "test": "Test 1" }');
         await driver.findElement(By.id('mashroom-sandbox-publish-message')).click();
 
