@@ -12,7 +12,8 @@
         {
             "path": "../../plugin-packages",
             "devMode": true
-        }],
+        }
+    ],
     "ignorePlugins": [
         "Mashroom Session Filestore Provider"
     ],
