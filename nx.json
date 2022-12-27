@@ -14,9 +14,6 @@
     },
     "targetDefaults": {
         "build": {
-            "dependsOn": [
-                "^build"
-            ],
             "outputs": [
                 "{projectRoot}/dist",
                 "{projectRoot}/lib",
