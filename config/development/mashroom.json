@@ -6,7 +6,10 @@
     "pluginPackageFolders": [
         {
             "path": "../../node_modules/@mashroom",
-            "devMode": false,
+            "watch": true
+        },
+        {
+            "path": "../../node_modules/@mashroom-content",
             "watch": true
         },
         {
@@ -85,6 +88,21 @@
             "userPrivateBaseTopic": "user",
             "enableWebSockets": true,
             "topicACL": "./topicACL.json"
+        },
+        "Mashroom Content Services": {
+            "provider": "Mashroom Content Internal Storage Provider",
+            "cacheEnable": true,
+            "cacheTTLSec": 1800
+        },
+        "Mashroom Content Asset Processing Services": {
+            "scaleUp": false,
+            "defaultQuality": 75,
+            "cacheEnable": true,
+            "cacheDefaultTTLSec": 31536000,
+            "cacheFolder": "../../data/asset-proc-cache"
+        },
+        "Mashroom Content Internal Storage Provider": {
+            "assetsFolder": "../../data/assets"
         }
     }
 }
