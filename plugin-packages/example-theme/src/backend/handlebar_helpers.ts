@@ -6,8 +6,6 @@ import context from './context';
 // eslint-disable-next-line @typescript-eslint/no-var-requires
 const packageJson = require('../package.json');
 
-import type {UserAgent} from '@mashroom/mashroom-portal/type-definitions';
-
 function equals(this: any, lvalue: any, rvalue: any, options: any) {
     if (arguments.length < 3) {
         throw new Error('Handlebars Helper equal needs 2 parameters');
@@ -21,13 +19,6 @@ function equals(this: any, lvalue: any, rvalue: any, options: any) {
 
 function year() {
     return `<span>${new Date().getFullYear()}</span>`;
-}
-
-function isIE(this: any, userAgent: UserAgent, options: any) {
-    if (userAgent.browser.name && userAgent.browser.name.startsWith('IE')) {
-        return options.fn(this);
-    }
-    return null;
 }
 
 function i18n(messages: (key: string) => string, key: string) {
@@ -79,7 +70,6 @@ function inlineSVG(assetFile: string): string {
 export default {
     equals,
     year,
-    isIE,
     env,
     inlineStyle,
     inlineSVG,
