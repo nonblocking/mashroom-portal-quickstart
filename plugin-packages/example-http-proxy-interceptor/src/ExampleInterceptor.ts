@@ -21,8 +21,8 @@ export default class ExampleInterceptor implements MashroomHttpProxyInterceptor 
         Promise<MashroomHttpProxyRequestInterceptorResult | undefined | null> {
 
         const logger: MashroomLogger = clientRequest.pluginContext.loggerFactory('my.httpProxyInterceptor');
-        const securityService: MashroomSecurityService = clientRequest.pluginContext.services.security.service;
-        const user = securityService.getUser(clientRequest);
+        const securityService: MashroomSecurityService | undefined = clientRequest.pluginContext.services.security?.service;
+        const user = securityService?.getUser(clientRequest);
 
         logger.info(`Intercepted HTTP proxy call to ${targetUri} by user: ${user?.username || 'anonymous'}`);
 
