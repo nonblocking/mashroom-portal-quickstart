@@ -4,12 +4,12 @@
     "license": "MIT",
     "version": "1.0.0",
     "dependencies": {
-        "express-handlebars": "^6.0.6",
+        "express-handlebars": "^6.0.7",
         "handlebars": "^4.7.7"
     },
     "devDependencies": {
-        "@fortawesome/fontawesome-free": "^6.2.0",
-        "bootstrap": "^5.2.2",
+        "@fortawesome/fontawesome-free": "^6.3.0",
+        "bootstrap": "^5.2.3",
         "copyfiles": "^2.4.1",
         "@types/express-handlebars": "^6.0.0",
         "nodemon": "^2.0.20"
