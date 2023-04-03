@@ -33,10 +33,11 @@
     <script type="application/javascript" src="{{resourcesBasePath}}/main.js?v={{themeVersionHash}}"></script>
 </head>
 <body>
-    <div id="mashroom-portal-admin-app-container">
-        <!-- Admin app goes here -->
-    </div>
-
+    {{#if adminApp}}
+        <div id="mashroom-portal-admin-app-container">
+            <!-- Admin app goes here -->
+        </div>
+    {{/if}}
     <header>
         <div class="logo">
             {{{ inlineSVG 'logo-white.svg'}}}
