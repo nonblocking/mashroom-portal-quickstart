@@ -47,11 +47,11 @@
         "@mashroom/mashroom-storage-provider-filestore": "^2.4.3",
         "@mashroom/mashroom-robots": "^2.4.3",
         "@mashroom/mashroom-json-schemas": "^2.4.3",
-        "@mashroom-content/mashroom-content-api": "^1.0.2",
-        "@mashroom-content/mashroom-content-asset-processing": "^1.0.2",
-        "@mashroom-content/mashroom-content-provider-internal-storage": "^1.0.2",
-        "@mashroom-content/mashroom-content-media-library-app": "^1.0.2",
-        "@mashroom-content/mashroom-content-markdown-renderer-app": "^1.0.2",
+        "@mashroom-content/mashroom-content-api": "^1.0.3",
+        "@mashroom-content/mashroom-content-asset-processing": "^1.0.3",
+        "@mashroom-content/mashroom-content-provider-internal-storage": "^1.0.3",
+        "@mashroom-content/mashroom-content-media-library-app": "^1.0.3",
+        "@mashroom-content/mashroom-content-markdown-renderer-app": "^1.0.3",
         "lerna": "^6.6.2"
     },
     "devDependencies": {
