@@ -3,7 +3,7 @@ const path = require('path');
 const ESLintPlugin = require('eslint-webpack-plugin');
 
 module.exports = {
-    entry: __dirname + '/src/js/index',
+    entry: __dirname + '/src',
     output: {
         path: __dirname + '/dist',
         filename: 'bundle.js',
@@ -28,6 +28,9 @@ module.exports = {
                     },
                     {
                         loader: 'css-loader',
+                        options: {
+                            modules: true,
+                        },
                     },
                     {
                         loader: 'sass-loader',

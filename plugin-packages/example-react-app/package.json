@@ -25,7 +25,8 @@
             "<rootDir>/test-e2e"
         ],
         "transform": {
-            "^.+\\.tsx?$": "babel-jest"
+            "^.+\\.tsx?$": "babel-jest",
+            ".+\\.scss$": "jest-css-modules-transform"
         },
         "setupFilesAfterEnv": [
             "./setupTests.js",
