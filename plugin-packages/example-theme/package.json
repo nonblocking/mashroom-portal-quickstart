@@ -4,12 +4,12 @@
     "license": "MIT",
     "version": "1.0.0",
     "dependencies": {
-        "express-handlebars": "^7.0.7",
-        "handlebars": "^4.7.7"
+        "express-handlebars": "^7.1.2",
+        "handlebars": "^4.7.8"
     },
     "devDependencies": {
-        "@fortawesome/fontawesome-free": "^6.4.0",
-        "bootstrap": "^5.3.0",
+        "@fortawesome/fontawesome-free": "^6.4.2",
+        "bootstrap": "^5.3.1",
         "copyfiles": "^2.4.1",
         "@types/express-handlebars": "^6.0.0",
         "nodemon": "^2.0.22"
@@ -19,8 +19,8 @@
         "type-check": "tsc --noEmit",
         "dev": "nodemon --watch src -e js,scss --exec \"npm run build && node dist/standalone-dev.js\"",
         "build:backend": "babel --extensions .js,.ts src/backend -d dist",
-        "build:frontend": "webpack --mode production && sass --style compressed --load-path=. src/frontend/sass/portal.scss:dist/public/portal.css src/frontend/sass/admin.scss:dist/public/admin.css",
-        "build:copy-assets": "copyfiles -u 1 src/assets/* dist/public && copyfiles -u 3 node_modules/@fortawesome/fontawesome-free/**/* dist/public/fontawesome",
+        "build:frontend": "webpack --mode production && sass --style compressed --load-path=../.. src/frontend/sass/portal.scss:dist/public/portal.css src/frontend/sass/admin.scss:dist/public/admin.css",
+        "build:copy-assets": "copyfiles -u 1 src/assets/* dist/public && copyfiles -u 5 ../../node_modules/@fortawesome/fontawesome-free/**/* dist/public/fontawesome",
         "build": "npm run build:backend && npm run build:frontend  && npm run build:copy-assets"
     }
 }

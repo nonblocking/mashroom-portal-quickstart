@@ -3,8 +3,6 @@
     "description": "Example HTTP proxy interceptor for Mashroom",
     "license": "MIT",
     "version": "1.0.0",
-    "devDependencies": {
-    },
     "scripts": {
         "test": "jest --passWithNoTests",
         "build": "babel -x .ts src -d ./dist",

@@ -11,7 +11,7 @@ This template demonstrates how to integrate a standalone React app into the Port
 
 ## Start the server
 
-* npm run setup
+* npm install
 * npm start
 
 Open [http://localhost:5050](http://localhost:5050) in your browser.
