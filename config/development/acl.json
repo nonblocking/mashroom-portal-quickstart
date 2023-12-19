@@ -1,6 +1,6 @@
 {
     "$schema": "https://www.mashroom-server.com/schemas/mashroom-security-acl.json",
-    "/portal/web/___/api/logout": {
+    "/portal/*/___/api/logout": {
         "GET": {
             "allow": "any"
         }
