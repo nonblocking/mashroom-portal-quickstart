@@ -7,7 +7,7 @@ This template demonstrates how to integrate a standalone React app into the Port
 
 ## Prerequisites
 
-* Node.js >= 16
+* Node.js >= 18
 
 ## Start the server
 
