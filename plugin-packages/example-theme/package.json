@@ -8,11 +8,11 @@
         "handlebars": "^4.7.8"
     },
     "devDependencies": {
-        "@fortawesome/fontawesome-free": "^6.5.1",
-        "bootstrap": "^5.3.2",
+        "@fortawesome/fontawesome-free": "^6.5.2",
+        "bootstrap": "^5.3.3",
         "copyfiles": "^2.4.1",
         "@types/express-handlebars": "^6.0.0",
-        "nodemon": "^3.0.2"
+        "nodemon": "^3.1.0"
     },
     "scripts": {
         "lint": "eslint --fix src",

@@ -6,9 +6,9 @@
     "devDependencies": {
         "react": "^18.2.0",
         "react-dom": "^18.2.0",
-        "selenium-webdriver": "^4.16.0",
-        "chromedriver": "^120.0.1",
-        "@types/selenium-webdriver": "^4.1.21"
+        "selenium-webdriver": "^4.19.0",
+        "chromedriver": "^123.0.1",
+        "@types/selenium-webdriver": "^4.1.22"
     },
     "scripts": {
         "lint": "eslint --fix src test",
