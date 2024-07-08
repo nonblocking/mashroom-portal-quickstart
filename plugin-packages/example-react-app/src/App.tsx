@@ -1,7 +1,7 @@
 import React, {useCallback, useEffect, useState} from 'react';
 import type {MashroomPortalMessageBus} from '@mashroom/mashroom-portal/type-definitions';
 
-import styles from './App.scss';
+import { Header, App } from './App.scss';
 
 type Props = {
     name: string,
@@ -26,8 +26,8 @@ export default ({name, messageBus}: Props) => {
     }, []);
 
     return (
-        <div className={styles.App}>
-            <div className={styles.Header}>
+        <div className={App}>
+            <div className={Header}>
                 <strong>Hello {name}!</strong>
             </div>
             <div>

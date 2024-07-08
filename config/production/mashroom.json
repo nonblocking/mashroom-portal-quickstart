@@ -20,7 +20,12 @@
         "Mashroom Portal WebApp": {
             "adminApp": "Mashroom Portal Admin App",
             "defaultTheme": "Mashroom Portal Default Theme",
-            "warnBeforeAuthenticationExpiresSec": 120
+            "authenticationExpiration": {
+                "warnBeforeExpirationSec": 60,
+                "onExpiration": {
+                    "strategy": "reload"
+                }
+            }
         },
         "Mashroom Portal Remote App Registry": {
             "remotePortalAppUrls": "./remotePortalApps.json"
@@ -32,7 +37,6 @@
             "provider": "Mashroom Session Filestore Provider",
             "session": {
                 "cookie": {
-                    "maxAge": 1800000
                 }
             }
         },
