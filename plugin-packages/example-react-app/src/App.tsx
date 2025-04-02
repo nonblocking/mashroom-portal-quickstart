@@ -1,7 +1,7 @@
 import React, {useCallback, useEffect, useState} from 'react';
+import { Header, App } from './App.scss';
 import type {MashroomPortalMessageBus} from '@mashroom/mashroom-portal/type-definitions';
 
-import { Header, App } from './App.scss';
 
 type Props = {
     name: string,
@@ -12,13 +12,13 @@ export default ({name, messageBus}: Props) => {
     const [receivedData, setReceivedData] = useState<any>(null);
     const sendMessage = useCallback(() => {
         messageBus.publish('to-all', {
-            "foo": "bar"
+            foo: 'bar'
         });
     }, []);
     useEffect(() => {
         const messageHandler = (any: any) => {
             setReceivedData(any);
-        }
+        };
         messageBus.subscribe('dummy-topic', messageHandler);
         return () => {
             messageBus.unsubscribe('dummy-topic', messageHandler);

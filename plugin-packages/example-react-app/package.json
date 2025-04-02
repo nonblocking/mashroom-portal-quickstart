@@ -4,14 +4,14 @@
     "license": "MIT",
     "version": "1.0.0",
     "devDependencies": {
-        "react": "^18.2.0",
-        "react-dom": "^18.2.0",
-        "selenium-webdriver": "^4.19.0",
-        "chromedriver": "^123.0.1",
-        "@types/selenium-webdriver": "^4.1.22"
+        "react": "^18.3.1",
+        "react-dom": "^18.3.1",
+        "selenium-webdriver": "^4.30.0",
+        "chromedriver": "^134.0.5",
+        "@types/selenium-webdriver": "^4.1.28"
     },
     "scripts": {
-        "lint": "eslint --fix src test",
+        "lint": "eslint --fix",
         "type-check": "tsc --noEmit",
         "dev": "webpack serve --hot --mode development",
         "build": "webpack --mode production",

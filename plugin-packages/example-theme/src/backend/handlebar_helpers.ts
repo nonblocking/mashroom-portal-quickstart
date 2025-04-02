@@ -3,7 +3,7 @@ import {readFileSync} from 'fs';
 import {resolve} from 'path';
 import context from './context';
 
-// eslint-disable-next-line @typescript-eslint/no-var-requires
+ 
 const packageJson = require('../package.json');
 
 function equals(this: any, lvalue: any, rvalue: any, options: any) {
@@ -77,5 +77,5 @@ export default {
     fontawesomeVersion,
     ifShowEnvAndVersions,
     defaultPluginErrorMessage,
-    '__': i18n,
+    __: i18n,
 };

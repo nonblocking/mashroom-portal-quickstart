@@ -3,7 +3,7 @@ import type {MashroomPortalClientServices, MashroomPortalPageContent} from '@mas
 
 (global as any).toggleMenu = () => {
     document.querySelector('nav')?.classList.toggle('show');
-}
+};
 
 (global as any).toggleShowAppVersions = () => {
     const clientServices: MashroomPortalClientServices | undefined = (global as any).MashroomPortalServices;
@@ -11,11 +11,11 @@ import type {MashroomPortalClientServices, MashroomPortalPageContent} from '@mas
         return;
     }
     if (document.querySelector('.mashroom-portal-app-info')) {
-        clientServices.portalAppService.hideAppInfos()
+        clientServices.portalAppService.hideAppInfos();
     } else {
-        clientServices.portalAppService.showAppInfos()
+        clientServices.portalAppService.showAppInfos();
     }
-}
+};
 
 (global as any).onpopstate = (ev: PopStateEvent) => {
     const clientServices: MashroomPortalClientServices | undefined = (global as any).MashroomPortalServices;
@@ -83,11 +83,11 @@ import type {MashroomPortalClientServices, MashroomPortalPageContent} from '@mas
     );
 
     return false;
-}
+};
 
 const hideMobileMenu = () => {
     document.querySelector('nav')?.classList.remove('show');
-}
+};
 
 const highlightPageIdInNavigation = (pageId: string): void => {
     const navigationEl = document.querySelector('nav') as HTMLElement | undefined;

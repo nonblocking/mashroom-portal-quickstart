@@ -10,7 +10,7 @@ import type {ThenableWebDriver} from 'selenium-webdriver';
 const SANDBOX_BASE_URL = 'http://localhost:5050/portal/web/sandbox';
 const APP_NAME = 'Example React App';
 
-describe('Sample React App', () => {
+describe('Example React App', () => {
 
     let driver: ThenableWebDriver;
 
@@ -21,7 +21,7 @@ describe('Sample React App', () => {
     });
 
     afterEach(() => {
-        driver && driver.quit();
+        driver?.quit();
     });
 
     const loginAndWaitForApp = async () => {
@@ -41,7 +41,7 @@ describe('Sample React App', () => {
 
         await loginAndWaitForApp();
 
-        const app = await driver.findElement(By.className('example-react-app'));
+        const app = await driver.findElement(By.className('portal-app-mashroom-sandbox-app'));
         const helloWorld  = await app.findElement(By.xpath('//strong')).getText();
 
         expect(helloWorld).toBe(`Hello ${name}!`);

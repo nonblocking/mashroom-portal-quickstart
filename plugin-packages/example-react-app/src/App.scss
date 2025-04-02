@@ -1,8 +1,8 @@
 
 .App {
-  padding: 10px;
+    padding: var(--mashroom-portal-spacing-default, 10px);
 
-  .Header {
-    margin-bottom: 10px;
-  }
+    .Header {
+        margin-bottom: 10px;
+    }
 }

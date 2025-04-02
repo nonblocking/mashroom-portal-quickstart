@@ -39,7 +39,9 @@
             "showAddRemoteAppForm": true
         },
         "Mashroom Portal Default Theme": {
-            "showEnvAndVersions": true
+            "showEnvAndVersions": true,
+            "showPortalAppHeaders": false,
+            "darkMode": "auto"
         },
         "Mashroom Session Middleware": {
             "provider": "memory",
@@ -57,8 +59,10 @@
             "loginPage": "/login",
             "authenticationTimeoutSec": 1200
         },
+        "Mashroom Security Default Login Webapp": {
+            "darkMode": "auto"
+        },
         "Mashroom Helmet Middleware": {
-
         },
         "Mashroom Storage Services": {
             "provider": "Mashroom Storage Filestore Provider"

@@ -1,5 +1,5 @@
 # Builder
-FROM node:20.12.1-slim as builder
+FROM node:22.14.0-slim as builder
 WORKDIR /opt/app
 COPY ./config ./config
 COPY ./plugin-packages ./plugin-packages
@@ -8,7 +8,7 @@ RUN npm ci
 RUN npm run build
 
 # Actual image
-FROM node:20.12.1-slim
+FROM node:22.14.0-slim
 WORKDIR /opt/app
 COPY *.json mashroom-starter.js ./
 COPY ./config ./config

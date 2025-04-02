@@ -33,6 +33,11 @@
         "Mashroom Portal Remote App Registry Admin Webapp": {
             "showAddRemoteAppForm": false
         },
+        "Mashroom Portal Default Theme": {
+            "showEnvAndVersions": false,
+            "showPortalAppHeaders": false,
+            "darkMode": "auto"
+        },
         "Mashroom Session Middleware": {
             "provider": "Mashroom Session Filestore Provider",
             "session": {
@@ -50,6 +55,9 @@
         "Mashroom Security Simple Provider": {
             "users": "./users.json",
             "authenticationTimeoutSec": 1200
+        },
+        "Mashroom Security Default Login Webapp": {
+            "darkMode": "auto"
         },
         "Mashroom Helmet Middleware": {
 
