@@ -12,7 +12,7 @@
     "jest": {
         "verbose": true,
         "transform": {
-            "^.+\\.tsx?$": "babel-jest"
+            "^.+\\.tsx?$": "ts-jest"
         }
     }
 }
