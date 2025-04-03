@@ -41,6 +41,7 @@
         "Mashroom Portal Default Theme": {
             "showEnvAndVersions": true,
             "showPortalAppHeaders": false,
+            "styleFile": "./defaultThemeOverrides.css",
             "darkMode": "auto"
         },
         "Mashroom Session Middleware": {
