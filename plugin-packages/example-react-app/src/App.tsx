@@ -31,7 +31,7 @@ export default ({name, messageBus}: Props) => {
                 <strong>Hello {name}!</strong>
             </div>
             <div>
-                <a id='example-app-publish-some-message-link' href='javascript:void(0)' onClick={() => sendMessage()}>Publish a Message</a>
+                <a id='example-app-publish-some-message-link' onClick={() => sendMessage()}>Publish a Message</a>
             </div>
             {receivedData && (
                 <div>
