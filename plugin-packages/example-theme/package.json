@@ -9,10 +9,10 @@
     },
     "devDependencies": {
         "@fortawesome/fontawesome-free": "^6.7.2",
-        "bootstrap": "^5.3.3",
+        "bootstrap": "^5.3.7",
         "normalize.css": "^8.0.1",
         "copyfiles": "^2.4.1",
-        "nodemon": "^3.1.9"
+        "nodemon": "^3.1.10"
     },
     "scripts": {
         "lint": "eslint --fix",
