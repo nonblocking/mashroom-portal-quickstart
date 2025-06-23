@@ -1,2 +1,0 @@
-
-require('regenerator-runtime/runtime');
