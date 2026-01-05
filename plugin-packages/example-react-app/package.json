@@ -4,11 +4,11 @@
     "license": "MIT",
     "version": "1.0.0",
     "devDependencies": {
-        "react": "^19.1.0",
-        "react-dom": "^19.1.0",
-        "selenium-webdriver": "^4.33.0",
-        "chromedriver": "^137.0.4",
-        "@types/selenium-webdriver": "^4.1.28"
+        "react": "^19.2.3",
+        "react-dom": "^19.2.3",
+        "selenium-webdriver": "^4.39.0",
+        "chromedriver": "^143.0.3",
+        "@types/selenium-webdriver": "^4.35.4"
     },
     "scripts": {
         "lint": "eslint --fix",
